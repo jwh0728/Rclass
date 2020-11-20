@@ -1,0 +1,292 @@
+
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin17.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> data <- c(1:5)
+> data
+[1] 1 2 3 4 5
+> sdata <- seq(1,10,2)
+> sdata
+[1] 1 3 5 7 9
+> rdata 
+Error: object 'rdata' not found
+> rdata <- rep(1,2,2) #1에서 2까지 두번 반복 
+> rdata 
+[1] 1 1
+> rdata <- rep(1:2,2) #1에서 2까지 두번 반복 
+> rdata 
+[1] 1 2 1 2
+> first <- c("축구", "낚시", "수영", "등산")
+> first
+[1] "축구" "낚시" "수영" "등산"
+> second <- c("농구", "야구")
+> second 
+[1] "농구" "야구"
+> union(first, second)
+[1] "축구" "낚시" "수영" "등산" "농구" "야구"
+> setdiff(first, second)
+[1] "축구" "낚시" "수영" "등산"
+> intersect(first, second)
+character(0)
+> data; sdata; rdata; first; second 
+[1] 1 2 3 4 5
+[1] 1 3 5 7 9
+[1] 1 2 1 2
+[1] "축구" "낚시" "수영" "등산"
+[1] "농구" "야구"
+> mdata <- matrix(c(1:6))
+> mdata
+     [,1]
+[1,]    1
+[2,]    2
+[3,]    3
+[4,]    4
+[5,]    5
+[6,]    6
+> mrow <- matrix(c(1:8), nrow=2)
+> mrow
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+> mbyrow <- matrix(c(1:8), nrow=2, byrow = T)
+> mbyrow
+     [,1] [,2] [,3] [,4]
+[1,]    1    2    3    4
+[2,]    5    6    7    8
+> mrowcol <- matrix(c(1:9), nrow=3, ncol = 3)
+> mrowcol
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> length(mrowcol)
+[1] 9
+> apply(mrowcol, 1, max)
+[1] 7 8 9
+> apply(mrowcol, 2, mean)
+[1] 2 5 8
+> colnames(mrowcol) <- c("one", "two", "three")
+> mrowcol
+     one two three
+[1,]   1   4     7
+[2,]   2   5     8
+[3,]   3   6     9
+> vec<-c(1:12)
+> arr <- array(vec, c(3,2,2))
+> arr
+, , 1
+
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+
+, , 2
+
+     [,1] [,2]
+[1,]    7   10
+[2,]    8   11
+[3,]    9   12
+
+> no <- c(1,2,3)
+> name <- c("해", "달", "별")
+> age <- c(13, 7, 3)
+> family <- data.frame(No = no, Name = name, Age = age)
+> family
+  No Name Age
+1  1   해  13
+2  2   달   7
+3  3   별   3
+> family <- data.frame(m)
+Error in data.frame(m) : object 'm' not found
+> family <- data.frame(m)
+Error in data.frame(m) : object 'm' not found
+> m <- matrix(
++   c(1,"해", 13, 2, "달", 7, 3, "별", 3), 3, by = T)
+> family <- data.frame(m)
+> family
+  X1 X2 X3
+1  1 해 13
+2  2 달  7
+3  3 별  3
+> getwd()
+[1] "/Users/jwh0728"
+> setwd("/Users/jwh0728/Downloads/rstudio-master/data")
+Error in setwd("/Users/jwh0728/Downloads/rstudio-master/data") : 
+  cannot change working directory
+> setwd("/Users/jwh0728/Downloads/workspace_rstudio/rstudio-master/data")
+> family <- read.table("001family.txt", header = 1, sep = "")
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.table("001family.txt", header = 1, sep = " ")
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.table("001family.txt", header = 1, sep = " ")
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.table("001family.txt", header = 1, sep = " ")
+> family
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> family <- data.frame(x = seq(1, 3, 1), y=c(5:7), z=c('star', 'sun', 'moon'))
+> family
+  x y    z
+1 1 5 star
+2 2 6  sun
+3 3 7 moon
+> family$x
+[1] 1 2 3
+> family$y
+[1] 5 6 7
+> family$z
+[1] "star" "sun"  "moon"
+> apply(family[ , c(1,2)], 2, sum)
+ x  y 
+ 6 18 
+> x1 <- subset(family, y >=6)
+> x1
+  x y    z
+2 2 6  sun
+3 3 7 moon
+> height <- data.frame(no = c(1,2), height = c(120,130))
+> weight <- data.frame(no = c(1,2), weight = c(50, 60))
+> height
+  no height
+1  1    120
+2  2    130
+> weight
+  no weight
+1  1     50
+2  2     60
+> family <- merge(height, weight, by.x = "no", by.y = "no")
+> family
+  no height weight
+1  1    120     50
+2  2    130     60
+> mode(family)
+[1] "list"
+> class(family)
+[1] "data.frame"
+> list <- list("해", "달", "별")
+> list
+[[1]]
+[1] "해"
+
+[[2]]
+[1] "달"
+
+[[3]]
+[1] "별"
+
+> unlist <- unlist(list)
+> unlist
+[1] "해" "달" "별"
+> family <- lsit(name = c("해", "달", "별"), age =c(10,13,14), 
++                address= c("제주", "서울", "부산"), gender = c("남", "여", "여"),
++                htype = c("아파트", "아파트", "주택"))
+Error in lsit(name = c("해", "달", "별"), age = c(10, 13, 14), address = c("제주",  : 
+  could not find function "lsit"
+> family <- list(name = c("해", "달", "별"), age =c(10,13,14), 
++                address= c("제주", "서울", "부산"), gender = c("남", "여", "여"),
++                htype = c("아파트", "아파트", "주택"))
+> family 
+$name
+[1] "해" "달" "별"
+
+$age
+[1] 10 13 14
+
+$address
+[1] "제주" "서울" "부산"
+
+$gender
+[1] "남" "여" "여"
+
+$htype
+[1] "아파트" "아파트" "주택"  
+
+> family$name
+[1] "해" "달" "별"
+> family$name[1]
+[1] "해"
+> family$htype[3]
+[1] "주택"
+> family$htype[3] <- "오피스"
+> family$htype[3]
+[1] "오피스"
+> family$gender <- NULL 
+> family
+$name
+[1] "해" "달" "별"
+
+$age
+[1] 10 13 14
+
+$address
+[1] "제주" "서울" "부산"
+
+$htype
+[1] "아파트" "아파트" "오피스"
+
+> multi_family
+Error: object 'multi_family' not found
+> multi_family = list(c1 = list("해", "달", "별"), 
++                     c2 = list ("지구", "금성", "화성"), 
++                     c3 = list("목성", "토성", "명왕성"))
+> multi_family
+$c1
+$c1[[1]]
+[1] "해"
+
+$c1[[2]]
+[1] "달"
+
+$c1[[3]]
+[1] "별"
+
+
+$c2
+$c2[[1]]
+[1] "지구"
+
+$c2[[2]]
+[1] "금성"
+
+$c2[[3]]
+[1] "화성"
+
+
+$c3
+$c3[[1]]
+[1] "목성"
+
+$c3[[2]]
+[1] "토성"
+
+$c3[[3]]
+[1] "명왕성"
+
+
+> do.call(cbind, multi_family)
+     c1   c2     c3      
+[1,] "해" "지구" "목성"  
+[2,] "달" "금성" "토성"  
+[3,] "별" "화성" "명왕성"
+> 
