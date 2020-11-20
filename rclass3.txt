@@ -1,0 +1,346 @@
+
+> install.packages("stringr")
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/stringr_1.4.0.tgz'
+Content type 'application/x-gzip' length 210650 bytes (205 KB)
+==================================================
+downloaded 205 KB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//Rtmp6KagRm/downloaded_packages
+> str_extract("start13sun07mon03", "[0-9]{2}")
+Error in str_extract("start13sun07mon03", "[0-9]{2}") : 
+  could not find function "str_extract"
+> library("stringr")
+> str_extract("star13sun07mon03", "[0-9]{2}")
+[1] "13"
+> str_extract_all("start13sun07moon03", "[0-9]{2}")
+[[1]]
+[1] "13" "07" "03"
+
+> family <- "star2008sun2014moon2018"
+> str_extract_all(family, "[a-z]{3}")
+[[1]]
+[1] "sta" "sun" "moo"
+
+> str_extract_all(family, "[a-z]{3,}")
+[[1]]
+[1] "star" "sun"  "moon"
+
+> len <- str_length(family)
+> len
+[1] 23
+> family
+[1] "star2008sun2014moon2018"
+> string_c <-str_c(family, "galaxy2006")
+> string_c
+[1] "star2008sun2014moon2018galaxy2006"
+> string_vec <- c("star", "sun", "moon", "galaxy")
+> string_vec 
+[1] "star"   "sun"    "moon"   "galaxy"
+> string_join <- paste(string_vec, collapse = ",")
+> string_join 
+[1] "star,sun,moon,galaxy"
+> input_int <-scan()
+1: 1
+2: 2
+3: 3
+4: 4
+5: 5
+6: 
+Read 5 items
+> input_int
+[1] 1 2 3 4 5
+> input_char <- scan(what = character())
+1: 해
+2: 달
+3: 별
+4: 은하
+5: 
+Read 4 items
+> 
+> input_char
+[1] "해"   "달"   "별"   "은하"
+> family <- data.frame()
+> family <- edit(family)
+Error in check_for_XQuartz() : 
+  X11 library is missing: install XQuartz from xquartz.macosforge.org
+> getwd()
+[1] "/Users/jwh0728/Downloads/workspace_rstudio/rstudio-master/data"
+> family <- read.table(file = "003familynotitle.txt")
+> family
+  V1   V2 V3
+1  1 star 13
+2  2  sun  7
+3  3 moon  3
+> family <- read.table(file = "001family.txt")
+> family
+  V1   V2  V3
+1 No Name Age
+2  1 star  13
+3  2  sun  07
+4  3 moon  03
+> family <- read.table(file.choose(), header = T)
+> family
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> family <- read.table("004familysemi.txt", sep = ";", header = T)
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.table("004familysemi.txt", sep = ";", header = T)
+> family 
+  NO NAME AGE
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> family <- read.table("005familytab.txt", sep = "\t", header = T)
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.table("005familytab.txt", sep = "\t", header = T)
+> family 
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> family <- read.table("006familynodata.txt", header = T, na.strings = "-")
+> family
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon  NA
+> family <- read.csv("007familycsv.txt", header = T, na.strings = "-")
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<b9><f8>ȣ'
+> family <- read.csv("007familycsv.txt", header = T, na.strings = "-")
+> family
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon  NA
+> install.packages("readxl")
+also installing the dependencies ‘assertthat’, ‘utf8’, ‘digest’, ‘rematch’, ‘cli’, ‘crayon’, ‘ellipsis’, ‘fansi’, ‘lifecycle’, ‘pillar’, ‘pkgconfig’, ‘rlang’, ‘vctrs’, ‘hms’, ‘prettyunits’, ‘R6’, ‘cellranger’, ‘Rcpp’, ‘tibble’, ‘progress’
+
+
+  There are binary versions available but the source versions are
+  later:
+       binary source needs_compilation
+cli     2.1.0  2.2.0             FALSE
+pillar  1.4.6  1.4.7             FALSE
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/assertthat_0.2.1.tgz'
+Content type 'application/x-gzip' length 52572 bytes (51 KB)
+==================================================
+downloaded 51 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/utf8_1.1.4.tgz'
+Content type 'application/x-gzip' length 195526 bytes (190 KB)
+==================================================
+downloaded 190 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/digest_0.6.27.tgz'
+Content type 'application/x-gzip' length 300368 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rematch_1.0.1.tgz'
+Content type 'application/x-gzip' length 12214 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/crayon_1.3.4.tgz'
+Content type 'application/x-gzip' length 748897 bytes (731 KB)
+==================================================
+downloaded 731 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/ellipsis_0.3.1.tgz'
+Content type 'application/x-gzip' length 33497 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/fansi_0.4.1.tgz'
+Content type 'application/x-gzip' length 210700 bytes (205 KB)
+==================================================
+downloaded 205 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/lifecycle_0.2.0.tgz'
+Content type 'application/x-gzip' length 91596 bytes (89 KB)
+==================================================
+downloaded 89 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/pkgconfig_2.0.3.tgz'
+Content type 'application/x-gzip' length 17738 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rlang_0.4.8.tgz'
+Content type 'application/x-gzip' length 1213505 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/vctrs_0.3.5.tgz'
+Content type 'application/x-gzip' length 1399958 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/hms_0.5.3.tgz'
+Content type 'application/x-gzip' length 103858 bytes (101 KB)
+==================================================
+downloaded 101 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/prettyunits_1.1.1.tgz'
+Content type 'application/x-gzip' length 34704 bytes (33 KB)
+==================================================
+downloaded 33 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/R6_2.5.0.tgz'
+Content type 'application/x-gzip' length 82447 bytes (80 KB)
+==================================================
+downloaded 80 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/cellranger_1.1.0.tgz'
+Content type 'application/x-gzip' length 101697 bytes (99 KB)
+==================================================
+downloaded 99 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/Rcpp_1.0.5.tgz'
+Content type 'application/x-gzip' length 3215939 bytes (3.1 MB)
+==================================================
+downloaded 3.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/tibble_3.0.4.tgz'
+Content type 'application/x-gzip' length 393069 bytes (383 KB)
+==================================================
+downloaded 383 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/progress_1.2.2.tgz'
+Content type 'application/x-gzip' length 83458 bytes (81 KB)
+==================================================
+downloaded 81 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/readxl_1.3.1.tgz'
+Content type 'application/x-gzip' length 1676952 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//Rtmp6KagRm/downloaded_packages
+installing the source packages ‘cli’, ‘pillar’
+
+trying URL 'https://cran.rstudio.com/src/contrib/cli_2.2.0.tar.gz'
+Content type 'application/x-gzip' length 120676 bytes (117 KB)
+==================================================
+downloaded 117 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/pillar_1.4.7.tar.gz'
+Content type 'application/x-gzip' length 113345 bytes (110 KB)
+==================================================
+downloaded 110 KB
+
+* installing *source* package ‘cli’ ...
+** package ‘cli’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (cli)
+* installing *source* package ‘pillar’ ...
+** package ‘pillar’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pillar)
+
+The downloaded source packages are in
+	‘/private/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T/Rtmp6KagRm/downloaded_packages’
+> library(readxl)
+> family <- read_excel(path="008familyexcel.xlsx", sheet="family")
+                                                                           
+> family
+# A tibble: 4 x 3
+   번호 이름    나이
+  <dbl> <chr>  <dbl>
+1     1 star      13
+2     2 sun        7
+3     3 moon       3
+4     4 galaxy     6
+Warning messages:
+1: Unknown or uninitialised column: `name`. 
+2: Unknown or uninitialised column: `htype`. 
+3: Unknown or uninitialised column: `htype`. 
+> star <- 13
+There were 12 warnings (use warnings() to see them)
+> sun <- 7
+Warning messages:
+1: Unknown or uninitialised column: `name`. 
+2: Unknown or uninitialised column: `htype`. 
+3: Unknown or uninitialised column: `htype`. 
+> moon <- 3 
+Warning messages:
+1: Unknown or uninitialised column: `name`. 
+2: Unknown or uninitialised column: `htype`. 
+3: Unknown or uninitialised column: `htype`. 
+> cat("star 는", star, "입니다.")
+star 는 13 입니다.Warning messages:
+1: Unknown or uninitialised column: `name`. 
+2: Unknown or uninitialised column: `htype`. 
+3: Unknown or uninitialised column: `htype`. 
+4: Unknown or uninitialised column: `name`. 
+5: Unknown or uninitialised column: `htype`. 
+6: Unknown or uninitialised column: `htype`. 
+7: Unknown or uninitialised column: `name`. 
+8: Unknown or uninitialised column: `htype`. 
+9: Unknown or uninitialised column: `htype`. 
+> print(sun)
+[1] 7
+Warning messages:
+1: Unknown or uninitialised column: `name`. 
+2: Unknown or uninitialised column: `htype`. 
+3: Unknown or uninitialised column: `htype`. 
+> family <- read.table(file="001family.txt", header = T)
+> write.table(family, "output.txt", row.names = F)
+> df <- read.table(file = "output.txt", sep = "", header = T)
+> df 
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> write.csv(family, "output.csv", row.names = F, quote = F)
+> csv <- read.table("output.csv", sep=",", header = T)
+> csv
+  No Name Age
+1  1 star  13
+2  2  sun   7
+3  3 moon   3
+> install.packages("writexl")
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/writexl_1.3.1.tgz'
+Content type 'application/x-gzip' length 364962 bytes (356 KB)
+==================================================
+downloaded 356 KB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//Rtmp6KagRm/downloaded_packages
+> library(writexl)
+> write_xlsx(x=family, path="output.xlsx", col_names = T)
+> xlsx <- read_excel(path="output.xlsx", sheet="sheet1")
+Error: Sheet 'sheet1' not found
+> xlsx <- read_excel(path="output.xlsx", sheet="Sheet1")
+                                                                           
+> 
