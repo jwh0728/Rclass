@@ -1,0 +1,1002 @@
+> bar_data <- matrix(c(1:16), nrow=4, ncol=4)
+> colnames(bar_data) <- c("도시A", "도시B", "시골A", "시골B")
+> View(bar_data)
+> par(mfrow = c(1,2))
+> barplot(bar_data, besite = T, col=rainbow(5), 
++         main="children care compare")
+Warning messages:
+1: In plot.window(xlim, ylim, log = log, ...) :
+  "besite" is not a graphical parameter
+2: In axis(if (horiz) 2 else 1, at = at.l, labels = names.arg, lty = axis.lty,  :
+  "besite" is not a graphical parameter
+3: In title(main = main, sub = sub, xlab = xlab, ylab = ylab, ...) :
+  "besite" is not a graphical parameter
+4: In axis(if (horiz) 1 else 2, cex.axis = cex.axis, ...) :
+  "besite" is not a graphical parameter
+> barplot(bar_data, beside = T, col=rainbow(5), 
+Warning messages:
+1: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+2: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+3: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+4: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+5: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+6: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+7: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+8: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
++         main="children care compare")
+> barplot(bar_data, beside = T, col=rainbow(5), 
+Warning messages:
+1: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+2: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+3: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+4: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+5: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+6: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+7: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
+8: In doTryCatch(return(expr), name, parentenv, handler) :
+  "besite" is not a graphical parameter
++         main="children care compare")
+> barplot(bar_data, beside = T, col=rainbow(5), 
++         main="children care compare")
+> barplot(bar_data, beside = T, col=rainbow(5), 
++         main="children care compare", 
++         legend = colnames(bar_data))
+> barplot(bar_data, beside = F, col=rainbow(5))
+> title(main = "children care compare", font.main=4)        
+> 
+> chart_data
+star2016  sun2016 star2017  sun2017 star2018 
+     110       70      125       75      130 
+ sun2018 star2019  sun2019 
+     100      135      125 
+> chart_data <- c(110,70,125,75,130,100,135,125)
+> names(chart_data) <- c("star2016", "sun2016", 
++                        "star2017", "sun2017", 
++                        "star2018", "sun2018", 
++                        "star2019", "sun2019")
+> chart_data
+star2016  sun2016 star2017  sun2017 star2018 
+     110       70      125       75      130 
+ sun2018 star2019  sun2019 
+     100      135      125 
+> par(mfrow = c(1,1))
+> dotchar(chart_data, color = c("blue", "red"), 
++         lcolor = "black", pch = 1:2, 
++         labels = names(chart_data), 
++         xlab = "height", 
++         main = "star vs sun", 
++         cex = 1.2)
+Error in dotchar(chart_data, color = c("blue", "red"), lcolor = "black",  : 
+  could not find function "dotchar"
+> dotchart(chart_data, color = c("blue", "red"), 
++         lcolor = "black", pch = 1:2, 
++         labels = names(chart_data), 
++         xlab = "height", 
++         main = "star vs sun", 
++         cex = 1.2)
+> par(mfrow = c(1,1))
+> pie(chart_data, 
++     labels = names(chart_data),
++     col = rainbow(8), 
++     cex = 1.2)
+> bar_data <- matrix((c:16), nrow = 4, ncol = 4)
+Error in c:16 : NA/NaN argument
+> colnames(bar_data) <- c("cityA", "cityB", "urbanA", "urbanB")
+> View(bar_data)
+> boxplot(bar_data, range = 0)
+> abline(h = 10, lty = 3, col = "red")
+> data(iris)
+> names(iris)
+[1] "Sepal.Length" "Sepal.Width"  "Petal.Length"
+[4] "Petal.Width"  "Species"     
+> 
+> summary(iris$Sepal.Length)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  4.300   5.100   5.800   5.843   6.400   7.900 
+> his(iris$Sepal.Length, xlab = "iris$Sepal.length", 
++     col="magenta", main="iris Sepal Length Histogram", 
++     xlim = c(4.3, 7.9))
+Error in his(iris$Sepal.Length, xlab = "iris$Sepal.length", col = "magenta",  : 
+  could not find function "his"
+> hist(iris$Sepal.Length, 
++     xlab = "iris$Sepal.length", 
++     col="magenta", 
++     main="iris Sepal Length Histogram", 
++     xlim = c(4.3, 7.9))
+> price <- runif(10, min=1, max=100)
+> plot(price, col="red")
+> par(new = T
++ par(new = T)
+Error: unexpected symbol in:
+"par(new = T
+par"
+> par(new = T)
+> line_chart = 1:100
+> plot(line_chart, type="l", col="red", 
++      axes = F, ann = F)
+> text(70,80, "대각선 추가", col="blue")
+> par(mfrow = c(2,2))
+> plot(price, type="l")
+> plot(price, type="o")
+> plot(price, type="h")
+> plot(price, type="s")
+> plot(price, type="o", pch=5)
+> plot(price, type="o", pch=15)
+> plot(price, type="o", pch=20, col="blue")
+> plot(price, type="o", pch=20, col="green", cex =1.5)
+> par(mfow =c(1,1))
+Warning message:
+In par(mfow = c(1, 1)) : "mfow" is not a graphical parameter
+> par(mfrow =c(1,1))
+> plot(price, type="o", pch=20, col="yellow", cex=2.0, lwd=3)
+> plot(price, type="o", pch=20, col="blue")
+> bar_data <- matrix(c(1:16), nrow=4, ncol=4)
+> colnames(bar_data) <- c("cA", "cB", "uA", "uB")
+> View(bar_data)
+> colnames(bar_data) <- c("cityA", "cityB", "cA", "cB")
+> View(bar_data)
+> install.packages("lattice")
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/lattice_0.20-41.tgz'
+Content type 'application/x-gzip' length 1148140 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//RtmpcorNM7/downloaded_packages
+> library(lattice)
+> dftable <- as.data.frame.table(bar_data)
+> dftable
+   Var1  Var2 Freq
+1     A cityA    1
+2     B cityA    2
+3     C cityA    3
+4     D cityA    4
+5     A cityB    5
+6     B cityB    6
+7     C cityB    7
+8     D cityB    8
+9     A    cA    9
+10    B    cA   10
+11    C    cA   11
+12    D    cA   12
+13    A    cB   13
+14    B    cB   14
+15    C    cB   15
+16    D    cB   16
+> barchart(Var1 ~ Freq | Var2, data = dftable, layout = c(4,1))
+> dotplot(Var1 ~ Freq | Var2, dftable)
+> dotplot(Var1 ~ Freq, data = dftable, groups= Var2,
++         type = "o", 
++         auto.key = list(space = "right", 
++                         points = T, 
++                         lines = T))
+> library(datasets)
+> airquality
+    Ozone Solar.R Wind Temp Month Day
+1      41     190  7.4   67     5   1
+2      36     118  8.0   72     5   2
+3      12     149 12.6   74     5   3
+4      18     313 11.5   62     5   4
+5      NA      NA 14.3   56     5   5
+6      28      NA 14.9   66     5   6
+7      23     299  8.6   65     5   7
+8      19      99 13.8   59     5   8
+9       8      19 20.1   61     5   9
+10     NA     194  8.6   69     5  10
+11      7      NA  6.9   74     5  11
+12     16     256  9.7   69     5  12
+13     11     290  9.2   66     5  13
+14     14     274 10.9   68     5  14
+15     18      65 13.2   58     5  15
+16     14     334 11.5   64     5  16
+17     34     307 12.0   66     5  17
+18      6      78 18.4   57     5  18
+19     30     322 11.5   68     5  19
+20     11      44  9.7   62     5  20
+21      1       8  9.7   59     5  21
+22     11     320 16.6   73     5  22
+23      4      25  9.7   61     5  23
+24     32      92 12.0   61     5  24
+25     NA      66 16.6   57     5  25
+26     NA     266 14.9   58     5  26
+27     NA      NA  8.0   57     5  27
+28     23      13 12.0   67     5  28
+29     45     252 14.9   81     5  29
+30    115     223  5.7   79     5  30
+31     37     279  7.4   76     5  31
+32     NA     286  8.6   78     6   1
+33     NA     287  9.7   74     6   2
+34     NA     242 16.1   67     6   3
+35     NA     186  9.2   84     6   4
+36     NA     220  8.6   85     6   5
+37     NA     264 14.3   79     6   6
+38     29     127  9.7   82     6   7
+39     NA     273  6.9   87     6   8
+40     71     291 13.8   90     6   9
+41     39     323 11.5   87     6  10
+42     NA     259 10.9   93     6  11
+43     NA     250  9.2   92     6  12
+44     23     148  8.0   82     6  13
+45     NA     332 13.8   80     6  14
+46     NA     322 11.5   79     6  15
+47     21     191 14.9   77     6  16
+48     37     284 20.7   72     6  17
+49     20      37  9.2   65     6  18
+50     12     120 11.5   73     6  19
+51     13     137 10.3   76     6  20
+52     NA     150  6.3   77     6  21
+53     NA      59  1.7   76     6  22
+54     NA      91  4.6   76     6  23
+55     NA     250  6.3   76     6  24
+56     NA     135  8.0   75     6  25
+57     NA     127  8.0   78     6  26
+58     NA      47 10.3   73     6  27
+59     NA      98 11.5   80     6  28
+60     NA      31 14.9   77     6  29
+61     NA     138  8.0   83     6  30
+62    135     269  4.1   84     7   1
+63     49     248  9.2   85     7   2
+64     32     236  9.2   81     7   3
+65     NA     101 10.9   84     7   4
+66     64     175  4.6   83     7   5
+67     40     314 10.9   83     7   6
+68     77     276  5.1   88     7   7
+69     97     267  6.3   92     7   8
+70     97     272  5.7   92     7   9
+71     85     175  7.4   89     7  10
+72     NA     139  8.6   82     7  11
+73     10     264 14.3   73     7  12
+74     27     175 14.9   81     7  13
+75     NA     291 14.9   91     7  14
+76      7      48 14.3   80     7  15
+77     48     260  6.9   81     7  16
+78     35     274 10.3   82     7  17
+79     61     285  6.3   84     7  18
+80     79     187  5.1   87     7  19
+81     63     220 11.5   85     7  20
+82     16       7  6.9   74     7  21
+83     NA     258  9.7   81     7  22
+84     NA     295 11.5   82     7  23
+85     80     294  8.6   86     7  24
+86    108     223  8.0   85     7  25
+87     20      81  8.6   82     7  26
+88     52      82 12.0   86     7  27
+89     82     213  7.4   88     7  28
+90     50     275  7.4   86     7  29
+91     64     253  7.4   83     7  30
+92     59     254  9.2   81     7  31
+93     39      83  6.9   81     8   1
+94      9      24 13.8   81     8   2
+95     16      77  7.4   82     8   3
+96     78      NA  6.9   86     8   4
+97     35      NA  7.4   85     8   5
+98     66      NA  4.6   87     8   6
+99    122     255  4.0   89     8   7
+100    89     229 10.3   90     8   8
+101   110     207  8.0   90     8   9
+102    NA     222  8.6   92     8  10
+103    NA     137 11.5   86     8  11
+104    44     192 11.5   86     8  12
+105    28     273 11.5   82     8  13
+106    65     157  9.7   80     8  14
+107    NA      64 11.5   79     8  15
+108    22      71 10.3   77     8  16
+109    59      51  6.3   79     8  17
+110    23     115  7.4   76     8  18
+111    31     244 10.9   78     8  19
+112    44     190 10.3   78     8  20
+113    21     259 15.5   77     8  21
+114     9      36 14.3   72     8  22
+115    NA     255 12.6   75     8  23
+116    45     212  9.7   79     8  24
+117   168     238  3.4   81     8  25
+118    73     215  8.0   86     8  26
+119    NA     153  5.7   88     8  27
+120    76     203  9.7   97     8  28
+121   118     225  2.3   94     8  29
+122    84     237  6.3   96     8  30
+123    85     188  6.3   94     8  31
+124    96     167  6.9   91     9   1
+125    78     197  5.1   92     9   2
+126    73     183  2.8   93     9   3
+127    91     189  4.6   93     9   4
+128    47      95  7.4   87     9   5
+129    32      92 15.5   84     9   6
+130    20     252 10.9   80     9   7
+131    23     220 10.3   78     9   8
+132    21     230 10.9   75     9   9
+133    24     259  9.7   73     9  10
+134    44     236 14.9   81     9  11
+135    21     259 15.5   76     9  12
+136    28     238  6.3   77     9  13
+137     9      24 10.9   71     9  14
+138    13     112 11.5   71     9  15
+139    46     237  6.9   78     9  16
+140    18     224 13.8   67     9  17
+141    13      27 10.3   76     9  18
+142    24     238 10.3   68     9  19
+143    16     201  8.0   82     9  20
+144    13     238 12.6   64     9  21
+145    23      14  9.2   71     9  22
+146    36     139 10.3   81     9  23
+147     7      49 10.3   69     9  24
+148    14      20 16.6   63     9  25
+149    30     193  6.9   70     9  26
+150    NA     145 13.2   77     9  27
+151    14     191 14.3   75     9  28
+152    18     131  8.0   76     9  29
+153    20     223 11.5   68     9  30
+> View(airquality)
+> xyplot(Ozone ~ Wind, data=airquality)
+> convert <- transform(airquality, Month = factor(Month))
+> xyplot(Ozone ~ Wind | Month, data = convert, 
++        layout = c(5,1))
+> xyplot(Ozone + Solar.R ~ Wind | factor(Month), 
++        data=airquality, 
++        col=c("red", "green"), 
++        layout = c(5,1))
+> head(quakes)
+     lat   long depth mag stations
+1 -20.42 181.62   562 4.8       41
+2 -20.62 181.03   650 4.2       15
+3 -26.00 184.10    42 5.4       43
+4 -17.97 181.66   626 4.1       19
+5 -20.42 181.96   649 4.0       11
+6 -19.68 184.31   195 4.0       12
+> View(quakes)
+> xyplot(lat ~ long, data = quakes, pch = ".")
+> tplot <- xyplot(lat ~ long, data = quakes,
++                 pch = ".")
+> tplot <- update(tplot, main="earth quakes")
+> print(tplot)
+> range(quakes$depth)
+[1]  40 680
+> quakes$depth2[quekes$depth >=40 & quakes$depth <= 150] <- 1
+Error in quakes$depth2[quekes$depth >= 40 & quakes$depth <= 150] <- 1 : 
+  object 'quekes' not found
+> quakes$depth2[quakes$depth >=40 & quakes$depth <= 150] <- 1
+> quakes$depth2[quakes$depth >=40 & quakes$depth <= 150] <- 1
+> quakes$depth2[quakes$depth >=40 & quakes$depth <= 150] <- 1
+> quakes$depth2[quakes$depth >=151 & quakes$depth <= 250] <- 2
+> quakes$depth2[quakes$depth >=251 & quakes$depth <= 350] <- 3
+> quakes$depth2[quakes$depth >=351 & quakes$depth <= 450] <- 4
+> quakes$depth2[quakes$depth >=451 & quakes$depth <= 550] <- 5
+> quakes$depth2[quakes$depth >=551 & quakes$depth <= 680] <- 6
+> View(quakes)
+> convert <- transform(quakes, depth2 = factor(depth2))
+> xyplot(lat ~ long | depth2, data = convert)
+> depthgroup <- equal.count(quakes$depth, number = 5, overlap = 0)
+> depthgroup 
+
+Data:
+   [1] 562 650  42 626 649 195  82 194 211 622
+  [11] 583 249 554 600 139 306  50 590 570 598
+  [21] 576 211 512 125 431 537 155 498 582 328
+  [31] 553  50 292 349  48 600 206 574 585 230
+  [41] 263  96 511  94 246  56 329  70 493 129
+  [51] 554 223  46 593 489 562 445 584 535 530
+  [61] 582 260 613  84 593 286 587 627 530  40
+  [71] 152 201  96 506 546 564 197 265 323 304
+  [81]  75 367 579 284 450 170 117 538 123  69
+  [91] 128 236 497 271 224 375 365 306  50 484
+ [101] 108 583 608  72 636 293  42 100  42 146
+ [111] 280 388 477 617 606 609  46  64 178 248
+ [121]  82  81 606 571 328  49 517 600  94 307
+ [131] 189 527  63 510 624  53  42 199 149 210
+ [141] 658 582 220 205 614 186  97  48 462 573
+ [151]  56 127 229 112 140 597  69 452  93 103
+ [161] 626 504 202  42  59  40 205 244 553 239
+ [171] 640 434 627  99 399 216 544 206 542 339
+ [181] 640  67 161 375 534  45 309 576 523 290
+ [191] 234 223 569 605 422 637 204 175 538 595
+ [201] 360 445 367 190 629 261 603 508 350 533
+ [211] 411 338 226  93 535 573 186 618 242 342
+ [221]  90 130  65 397 505  71 207 154 232 106
+ [231] 664 397 431  57 525 574  74 617  44 470
+ [241] 298 148  48 107 218 597 619  46 553 150
+ [251] 180  97 587 106 179 680 304 254 521 526
+ [261] 270 548 158 562 300  65 130  82 482 607
+ [271] 105 590 498 504 577 529 528 492 561 579
+ [281] 413 565 138 383 260 522 671 123 572 529
+ [291] 641  67 546 507 158 148 562 601 175 260
+ [301] 654 242 126 555 637 500 515 583 501  55
+ [311] 644 641 442 464 200 479 497 218 492 325
+ [321] 123 210 575 129  74  49 483  93 118  83
+ [331]  61 534  42 219 544  56  68  69  45  43
+ [341]  65  80  51  68  69 103  61  69  51  55
+ [351]  54  59 573  56  65 587 150 403  60 130
+ [361] 590 135 583 406 221  40 502 103 423 158
+ [371] 527 219 536 630 249  48 553 112 153 130
+ [381] 188 226 124 204 605 221 573 401 195  56
+ [391] 102  44 556 417 591 646 565  52 535 641
+ [401]  41 109  40 548 118 593 492 123 475 153
+ [411] 112  99  66 481 139 211 151 211 246  47
+ [421] 484 119  70 579  57 176 602 488 149 546
+ [431] 343 530 563 537 325  80 259 476 499 257
+ [441] 165 136 146 524  82  90 138 499 538 467
+ [451] 184 538  45 237 162 136 604 107 538 639
+ [461]  45 636 628 632 215 556 135 297 568 168
+ [471] 269 143  95 142 104 169  65  54 474 125
+ [481] 617 294 180  47 593  94 201 537 594 638
+ [491]  80 211 520 384 223  54  57  49 508 242
+ [501]  62  63 203 132 543 589  51  45  63 485
+ [511]  66  58  70 541 598  50 102 144  58 460
+ [521]  69 570  70 137  41 586 140 213 393  51
+ [531]  64  45 296  50  44  68 549 150  47 543
+ [541]  40 100  85  98  58 125  89 590  49 543
+ [551] 506  40  42  76  63 104  93  64 587  83
+ [561] 579  40  62 273 393 264 174 574 309  75
+ [571] 195  44 420  63 609  40 575 559 405  70
+ [581]  41 605 130 577 599  82  50 480 559 566
+ [591] 611 409 209  70  74 134 150 406 243  89
+ [601]  53  68 605 615 546 176  52  66 377 186
+ [611]  51  67 234 597  64 511  47  49 546  75
+ [621]  60 278 550 518 116 518  75 491  56 376
+ [631] 584  48  53 617 294 417 280 332  85 525
+ [641] 613 182  57  79 595 164 148  82 153 556
+ [651] 649 651  93 533 642  47 548 154 627 622
+ [661] 286 390 624 539 624 631 631 299 498 255
+ [671] 539 195 594 573 128 137 143 511 564 559
+ [681] 248 210 390 616  98 218 655 356 564 548
+ [691] 655 385 518 598 476 579 603 249 208 587
+ [701] 221 545 586 488 246  61 524 104 271 487
+ [711]  83 183  55 166 586 618 524 133 201 383
+ [721]  86 555 605 609 204 287 390 348 550 487
+ [731] 578 361 275 498 162  78 134 554 608 367
+ [741] 599  45  50 162 302  57 203  66 591 440
+ [751] 611  57 627  89 500 264 127  85  50  75
+ [761] 182 619 223 156  46  50 230 184 188  80
+ [771]  86 391 199 592 595 618 213 616 175 589
+ [781]  83 119  70  74  40  87  63 537  47 490
+ [791] 593 644 576 199 589 178 248 500  71 568
+ [801]  42 510  97 663 625 210 557 582 402 474
+ [811] 577  56  43 118 544 532 237 111 595 603
+ [821] 505 100 587 364 100 350 228  93  66 225
+ [831] 334  70 220 397 326 121 209 510  54 242
+ [841] 574  82 102  43 432 580 464 479 581 513
+ [851]  77  68  71  68 586 243 658 315 210 278
+ [861] 638 615 567 560  99 266 397 180  40 242
+ [871] 530 133  62 580 530 566 501 548 587 592
+ [881] 221 560  94 139 162 562 204  56  49 100
+ [891] 231 601  42 180 559 524  69 594 262 538
+ [901] 331  48  47 558 524 545 477 129 268 117
+ [911] 541 112 162 609  76  61 202  90 133 589
+ [921] 190 138 598 600 162 626 137  57 201  69
+ [931] 219 553 524  51 107  44 574 128 568 583
+ [941] 622 193 544 118  51  63 442  87  61  60
+ [951] 561 138 174 543 530 497  63  82 605 234
+ [961]  41  40 137 223 109 595 512 613  60  43
+ [971] 172  54  68 217 102 178 251  42 575  43
+ [981] 577  42  75  71  60 291 125  69 614 108
+ [991] 575 409 243 642  45 470 248 244  40 165
+
+Intervals:
+    min   max count
+1  39.5  80.5   203
+2  79.5 186.5   203
+3 185.5 397.5   203
+4 396.5 562.5   202
+5 562.5 680.5   200
+
+Overlap between adjacent intervals:
+[1] 4 3 4 0
+> xyplot(lat ~ long | depthgroup, data = quakes, 
++        main = "Earthquakes(depthgroup"), 
+Error: unexpected ',' in:
+"xyplot(lat ~ long | depthgroup, data = quakes, 
+       main = "Earthquakes(depthgroup"),"
+> ylab= "latitude", xlab= "longitude", 
+Error: unexpected ',' in "ylab= "latitude","
+> pch = "@", col="red")
+Error: unexpected ',' in "pch = "@","
+> xyplot(lat ~ long | depthgroup, data = quakes, 
++        main = "Earthquakes(depthgroup", 
++ ylab= "latitude", xlab= "longitude", 
++ pch = "@", col="red")
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       xlab = "lat", ylab="long", zlab= "depth")
+> clout(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 45, x = -25), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+Error in clout(depth ~ lat * long, data = quakes, zlim = rev(range(quakes$depth)),  : 
+  could not find function "clout"
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 45, x = -25), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 45, x = -20), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 40, x = -20), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 40, x = -10), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+> cloud(depth ~ lat * long, data = quakes, 
++       zlim = rev(range(quakes$depth)), 
++       screen = list(z = 40, x = -50), 
++       main = "3d", 
++       xlab = "lat", ylab="long", zlab= "depth")
+> install.packages("ggplot2")
+also installing the dependencies ‘rprojroot’, ‘pkgbuild’, ‘rstudioapi’, ‘diffobj’, ‘rematch2’, ‘brio’, ‘callr’, ‘desc’, ‘evaluate’, ‘jsonlite’, ‘pkgload’, ‘praise’, ‘processx’, ‘ps’, ‘waldo’, ‘colorspace’, ‘testthat’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘gtable’, ‘isoband’, ‘scales’, ‘withr’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rprojroot_2.0.2.tgz'
+Content type 'application/x-gzip' length 96290 bytes (94 KB)
+==================================================
+downloaded 94 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/pkgbuild_1.1.0.tgz'
+Content type 'application/x-gzip' length 139362 bytes (136 KB)
+==================================================
+downloaded 136 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rstudioapi_0.13.tgz'
+Content type 'application/x-gzip' length 271959 bytes (265 KB)
+==================================================
+downloaded 265 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/diffobj_0.3.2.tgz'
+Content type 'application/x-gzip' length 1006064 bytes (982 KB)
+==================================================
+downloaded 982 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rematch2_2.1.2.tgz'
+Content type 'application/x-gzip' length 44807 bytes (43 KB)
+==================================================
+downloaded 43 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/brio_1.1.0.tgz'
+Content type 'application/x-gzip' length 36738 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/callr_3.5.1.tgz'
+Content type 'application/x-gzip' length 385435 bytes (376 KB)
+==================================================
+downloaded 376 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/desc_1.2.0.tgz'
+Content type 'application/x-gzip' length 285234 bytes (278 KB)
+==================================================
+downloaded 278 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/evaluate_0.14.tgz'
+Content type 'application/x-gzip' length 74355 bytes (72 KB)
+==================================================
+downloaded 72 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/jsonlite_1.7.1.tgz'
+Content type 'application/x-gzip' length 1123583 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/pkgload_1.1.0.tgz'
+Content type 'application/x-gzip' length 150877 bytes (147 KB)
+==================================================
+downloaded 147 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/praise_1.0.0.tgz'
+Content type 'application/x-gzip' length 16137 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/processx_3.4.4.tgz'
+Content type 'application/x-gzip' length 278496 bytes (271 KB)
+==================================================
+downloaded 271 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/ps_1.4.0.tgz'
+Content type 'application/x-gzip' length 251683 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/waldo_0.2.3.tgz'
+Content type 'application/x-gzip' length 70175 bytes (68 KB)
+==================================================
+downloaded 68 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/colorspace_2.0-0.tgz'
+Content type 'application/x-gzip' length 2616761 bytes (2.5 MB)
+==================================================
+downloaded 2.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/testthat_3.0.0.tgz'
+Content type 'application/x-gzip' length 2886442 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/farver_2.0.3.tgz'
+Content type 'application/x-gzip' length 1829409 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/labeling_0.4.2.tgz'
+Content type 'application/x-gzip' length 60296 bytes (58 KB)
+==================================================
+downloaded 58 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/munsell_0.5.0.tgz'
+Content type 'application/x-gzip' length 241504 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/RColorBrewer_1.1-2.tgz'
+Content type 'application/x-gzip' length 52944 bytes (51 KB)
+==================================================
+downloaded 51 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/viridisLite_0.3.0.tgz'
+Content type 'application/x-gzip' length 57005 bytes (55 KB)
+==================================================
+downloaded 55 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/gtable_0.3.0.tgz'
+Content type 'application/x-gzip' length 431500 bytes (421 KB)
+==================================================
+downloaded 421 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/isoband_0.2.2.tgz'
+Content type 'application/x-gzip' length 4016637 bytes (3.8 MB)
+==================================================
+downloaded 3.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/scales_1.1.1.tgz'
+Content type 'application/x-gzip' length 552885 bytes (539 KB)
+==================================================
+downloaded 539 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/withr_2.3.0.tgz'
+Content type 'application/x-gzip' length 205487 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/ggplot2_3.3.2.tgz'
+Content type 'application/x-gzip' length 4064530 bytes (3.9 MB)
+==================================================
+downloaded 3.9 MB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//RtmpcorNM7/downloaded_packages
+> library(ggplot2)
+> data(mpg)
+> View(mpg)
+> table(mpg$drv)
+
+  4   f   r 
+103 106  25 
+> gplot(hwy, data = mpg, fill = drv)
+Error in gplot(hwy, data = mpg, fill = drv) : 
+  could not find function "gplot"
+> qplot(hwy, data = mpg, fill = drv)
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+> qplot(hwy, data=mpg, fill = drv, bindwidth = 2)
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+Warning message:
+Ignoring unknown parameters: bindwidth 
+> qplot(displ, hwy, data= mpg )
+> qplot(hwy, data=mpg, fill = drv, facets = drv ~ ., binwidth = 2)
+> qplot(displ, hwy, data= mpg )
+> qplot(hwy, data=mpg, fill = drv, bindwidth = 2)
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+Warning message:
+Ignoring unknown parameters: bindwidth 
+> qplot(hwy, data=mpg, fill = drv, binwidth = 2)
+> library(ggplot2)
+> install.packages("ggmap")
+also installing the dependencies ‘sys’, ‘askpass’, ‘sp’, ‘generics’, ‘tidyselect’, ‘curl’, ‘mime’, ‘openssl’, ‘cpp11’, ‘RgoogleMaps’, ‘png’, ‘plyr’, ‘rjson’, ‘jpeg’, ‘dplyr’, ‘bitops’, ‘httr’, ‘purrr’, ‘tidyr’
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/sys_3.4.tgz'
+Content type 'application/x-gzip' length 47291 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/askpass_1.1.tgz'
+Content type 'application/x-gzip' length 21511 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/sp_1.4-4.tgz'
+Content type 'application/x-gzip' length 1932488 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/generics_0.1.0.tgz'
+Content type 'application/x-gzip' length 69334 bytes (67 KB)
+==================================================
+downloaded 67 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/tidyselect_1.1.0.tgz'
+Content type 'application/x-gzip' length 197492 bytes (192 KB)
+==================================================
+downloaded 192 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/curl_4.3.tgz'
+Content type 'application/x-gzip' length 741519 bytes (724 KB)
+==================================================
+downloaded 724 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/mime_0.9.tgz'
+Content type 'application/x-gzip' length 35303 bytes (34 KB)
+==================================================
+downloaded 34 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/openssl_1.4.3.tgz'
+Content type 'application/x-gzip' length 2863764 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/cpp11_0.2.4.tgz'
+Content type 'application/x-gzip' length 154095 bytes (150 KB)
+==================================================
+downloaded 150 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/RgoogleMaps_1.4.5.3.tgz'
+Content type 'application/x-gzip' length 493083 bytes (481 KB)
+==================================================
+downloaded 481 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/png_0.1-7.tgz'
+Content type 'application/x-gzip' length 369557 bytes (360 KB)
+==================================================
+downloaded 360 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/plyr_1.8.6.tgz'
+Content type 'application/x-gzip' length 1012642 bytes (988 KB)
+==================================================
+downloaded 988 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/rjson_0.2.20.tgz'
+Content type 'application/x-gzip' length 191510 bytes (187 KB)
+==================================================
+downloaded 187 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/jpeg_0.1-8.1.tgz'
+Content type 'application/x-gzip' length 416504 bytes (406 KB)
+==================================================
+downloaded 406 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/dplyr_1.0.2.tgz'
+Content type 'application/x-gzip' length 1215871 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/bitops_1.0-6.tgz'
+Content type 'application/x-gzip' length 24529 bytes (23 KB)
+==================================================
+downloaded 23 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/httr_1.4.2.tgz'
+Content type 'application/x-gzip' length 498155 bytes (486 KB)
+==================================================
+downloaded 486 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/purrr_0.3.4.tgz'
+Content type 'application/x-gzip' length 417900 bytes (408 KB)
+==================================================
+downloaded 408 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/tidyr_1.1.2.tgz'
+Content type 'application/x-gzip' length 936440 bytes (914 KB)
+==================================================
+downloaded 914 KB
+
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.0/ggmap_3.0.0.tgz'
+Content type 'application/x-gzip' length 4698491 bytes (4.5 MB)
+==================================================
+downloaded 4.5 MB
+
+
+The downloaded binary packages are in
+	/var/folders/dp/7m7_53jd44s6fx8ww7st7t0h0000gn/T//RtmpcorNM7/downloaded_packages
+> library(ggmap)
+Google's Terms of Service: https://cloud.google.com/maps-platform/terms/.
+Please cite ggmap if you use it! See citation("ggmap") for details.
+> seoul <- c(left = 126.77, bottom = 37.40,
++            right = 126.17, top = 37.70)
+> map <- get_stamenmap(seoul, zoom=12, maptype='terrain')
+Source : http://tile.stamen.com/terrain/12/3483/1584.png
+Source : http://tile.stamen.com/terrain/12/3484/1584.png
+Source : http://tile.stamen.com/terrain/12/3485/1584.png
+Source : http://tile.stamen.com/terrain/12/3486/1584.png
+Source : http://tile.stamen.com/terrain/12/3487/1584.png
+Source : http://tile.stamen.com/terrain/12/3488/1584.png
+Source : http://tile.stamen.com/terrain/12/3489/1584.png
+Source : http://tile.stamen.com/terrain/12/3490/1584.png
+Source : http://tile.stamen.com/terrain/12/3483/1585.png
+Source : http://tile.stamen.com/terrain/12/3484/1585.png
+Source : http://tile.stamen.com/terrain/12/3485/1585.png
+Source : http://tile.stamen.com/terrain/12/3486/1585.png
+Source : http://tile.stamen.com/terrain/12/3487/1585.png
+Source : http://tile.stamen.com/terrain/12/3488/1585.png
+Source : http://tile.stamen.com/terrain/12/3489/1585.png
+Source : http://tile.stamen.com/terrain/12/3490/1585.png
+Source : http://tile.stamen.com/terrain/12/3483/1586.png
+Source : http://tile.stamen.com/terrain/12/3484/1586.png
+Source : http://tile.stamen.com/terrain/12/3485/1586.png
+Source : http://tile.stamen.com/terrain/12/3486/1586.png
+Source : http://tile.stamen.com/terrain/12/3487/1586.png
+Source : http://tile.stamen.com/terrain/12/3488/1586.png
+Source : http://tile.stamen.com/terrain/12/3489/1586.png
+Source : http://tile.stamen.com/terrain/12/3490/1586.png
+Source : http://tile.stamen.com/terrain/12/3483/1587.png
+Source : http://tile.stamen.com/terrain/12/3484/1587.png
+Source : http://tile.stamen.com/terrain/12/3485/1587.png
+Source : http://tile.stamen.com/terrain/12/3486/1587.png
+Source : http://tile.stamen.com/terrain/12/3487/1587.png
+Source : http://tile.stamen.com/terrain/12/3488/1587.png
+Source : http://tile.stamen.com/terrain/12/3489/1587.png
+Source : http://tile.stamen.com/terrain/12/3490/1587.png
+Source : http://tile.stamen.com/terrain/12/3483/1588.png
+Source : http://tile.stamen.com/terrain/12/3484/1588.png
+Source : http://tile.stamen.com/terrain/12/3485/1588.png
+Source : http://tile.stamen.com/terrain/12/3486/1588.png
+Source : http://tile.stamen.com/terrain/12/3487/1588.png
+Source : http://tile.stamen.com/terrain/12/3488/1588.png
+Source : http://tile.stamen.com/terrain/12/3489/1588.png
+Source : http://tile.stamen.com/terrain/12/3490/1588.png
+> ggmap(map)
+Error in grid.Call.graphics(C_raster, x$raster, x$x, x$y, x$width, x$height,  : 
+  Empty raster
+In addition: Warning messages:
+1: Removed 1 rows containing missing values
+(geom_rect). 
+2: In min(x) : no non-missing arguments to min; returning Inf
+3: In max(x) : no non-missing arguments to max; returning -Inf
+4: In min(x) : no non-missing arguments to min; returning Inf
+5: In max(x) : no non-missing arguments to max; returning -Inf
+6: In min(x) : no non-missing arguments to min; returning Inf
+7: In max(x) : no non-missing arguments to max; returning -Inf
+8: In min(x) : no non-missing arguments to min; returning Inf
+9: In max(x) : no non-missing arguments to max; returning -Inf
+> seoul <- c(left = 126.77, bottom = 37.40,
++            right = 127.17, top = 37.70)
+> map <- get_stamenmap(seoul, zoom=12, maptype='terrain')
+Source : http://tile.stamen.com/terrain/12/3491/1584.png
+Source : http://tile.stamen.com/terrain/12/3492/1584.png
+Source : http://tile.stamen.com/terrain/12/3493/1584.png
+Source : http://tile.stamen.com/terrain/12/3494/1584.png
+Source : http://tile.stamen.com/terrain/12/3491/1585.png
+Source : http://tile.stamen.com/terrain/12/3492/1585.png
+Source : http://tile.stamen.com/terrain/12/3493/1585.png
+Source : http://tile.stamen.com/terrain/12/3494/1585.png
+Source : http://tile.stamen.com/terrain/12/3491/1586.png
+Source : http://tile.stamen.com/terrain/12/3492/1586.png
+Source : http://tile.stamen.com/terrain/12/3493/1586.png
+Source : http://tile.stamen.com/terrain/12/3494/1586.png
+Source : http://tile.stamen.com/terrain/12/3491/1587.png
+Source : http://tile.stamen.com/terrain/12/3492/1587.png
+Source : http://tile.stamen.com/terrain/12/3493/1587.png
+Source : http://tile.stamen.com/terrain/12/3494/1587.png
+Source : http://tile.stamen.com/terrain/12/3491/1588.png
+Source : http://tile.stamen.com/terrain/12/3492/1588.png
+Source : http://tile.stamen.com/terrain/12/3493/1588.png
+Source : http://tile.stamen.com/terrain/12/3494/1588.png
+> ggmap(map)
+> pop <- read.csv(file="011population201901.csv", header = T)
+Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '<c1><f6><bf><aa><b8><ed>'
+> pop <- read.csv(file="011population201901.csv", header = T)
+Error in type.convert.default(data[[i]], as.is = as.is[i], dec = dec,  : invalid multibyte string at '<bc><ad><bf><ef><c6>��<b0><bd><c3>  '
+> pop <- read.csv(file="011population201901.csv", header = T)
+> View(pop)
+> library(stringr)
+> region<-pop$local
+> lon <- pop$LON
+> region<-pop$local
+> lat<- pop$LAT
+> tot_pop <- as.numeric(str_replace_all(pop$'total', ',', ''))
+> df <- data.frame(region, lon, lat, tot_pop)
+Error in data.frame(region, lon, lat, tot_pop) : 
+  arguments imply differing number of rows: 18, 0
+> tot_pop <- as.numeric(str_replace_all(pop$pop, ',', ''))
+> df <- data.frame(region, lon, lat, tot_pop)
+> df
+           region      lon      lat  tot_pop
+1         seoul   126.9895 37.56510  9766288
+2         pusan   129.0447 35.16277  3438259
+3         dague   128.5667 35.87975  2460382
+4        inchon   126.7052 37.45622  2955916
+5       gwangju   126.8515 35.16008  1459832
+6        daejon   127.3888 36.37310  1488725
+7         ulsan   129.3114 35.53874  1154786
+8          sejong 127.2908 36.48086   316814
+9        kyungi   127.5293 37.42184 13090648
+10      kangwan   128.2039 37.86652  1541693
+11     chungbuk   127.4914 36.63740  1599155
+12  chungcheung   126.7989 36.52127  2125797
+13     jonlabuk   127.1114 35.82100  1834532
+14     jonlanam   126.4629 34.81621  1878904
+15 kyungsangbuk   128.6893 36.35658  2674005
+16 kyungsangnam   128.3910 35.22106  3373214
+17         jeju   126.4983 33.48901   667337
+18          total       NA       NA 51826287
+> daegu <- c(left = 123.4423013, bottom = 32.8528306,
++            + right = 131.601445, top = 38.8714354)
+Error: unexpected '=' in:
+"daegu <- c(left = 123.4423013, bottom = 32.8528306,
+           + right ="
+> daegu <- c(left = 123.4423013, bottom = 32.8528306,
++           right = 131.601445, top = 38.8714354)
+> map <- get_stamenmap(daegu, zoom = 7, maptype = 'watercolor')
+Source : http://tile.stamen.com/watercolor/7/107/48.jpg
+Source : http://tile.stamen.com/watercolor/7/108/48.jpg
+Source : http://tile.stamen.com/watercolor/7/109/48.jpg
+Source : http://tile.stamen.com/watercolor/7/110/48.jpg
+Source : http://tile.stamen.com/watercolor/7/107/49.jpg
+Source : http://tile.stamen.com/watercolor/7/108/49.jpg
+Source : http://tile.stamen.com/watercolor/7/109/49.jpg
+Source : http://tile.stamen.com/watercolor/7/110/49.jpg
+Source : http://tile.stamen.com/watercolor/7/107/50.jpg
+Source : http://tile.stamen.com/watercolor/7/108/50.jpg
+Source : http://tile.stamen.com/watercolor/7/109/50.jpg
+Source : http://tile.stamen.com/watercolor/7/110/50.jpg
+Source : http://tile.stamen.com/watercolor/7/107/51.jpg
+Source : http://tile.stamen.com/watercolor/7/108/51.jpg
+Source : http://tile.stamen.com/watercolor/7/109/51.jpg
+Source : http://tile.stamen.com/watercolor/7/110/51.jpg
+> layer1 <- ggmap(map)
+> layer1
+> layer2 <- layer1 + geom_point(data = df, 
++   aes(x=lon, y=lat, color=factor(top_pop), size=factor(top_pop))
++   )
+> layer2
+Error in factor(top_pop) : object 'top_pop' not found
+> layer2 <- layer1 + geom_point(data = df, 
++   aes(x=lon, y=lat, color=factor(tot_pop), size=factor(tot_pop))
++   )
+> layer2
+Warning messages:
+1: Using size for a discrete variable is not advised. 
+2: Removed 1 rows containing missing values
+(geom_point). 
+> layer3 <- layer2 + geom_text(data=df, 
++    aes(x = lon + 0.01, y= lat+ 0.08, 
++        label = region), size =3 )
+> layer3
+Warning messages:
+1: Using size for a discrete variable is not advised. 
+2: Removed 1 rows containing missing values
+(geom_point). 
+3: Removed 1 rows containing missing values
+(geom_text). 
+> ggsave ("pop201901.png", scale=1, width = 10.24, 
++         height=7.68)
+Warning messages:
+1: Using size for a discrete variable is not advised. 
+2: Removed 1 rows containing missing values
+(geom_point). 
+3: Removed 1 rows containing missing values
+(geom_text). 
+> 
+
